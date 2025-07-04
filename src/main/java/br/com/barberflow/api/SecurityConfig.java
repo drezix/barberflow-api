@@ -17,16 +17,16 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(toH2Console()).permitAll() // Libera o H2 Console
-                        .anyRequest().authenticated() // Exige autenticação para todo o resto
+                        .requestMatchers(toH2Console()).permitAll()
+                        .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf
-                        .ignoringRequestMatchers(toH2Console()) // Desabilita proteção CSRF para o H2
+                        .ignoringRequestMatchers(toH2Console())
                 )
                 .headers(headers -> headers
-                        .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin) // Permite que o H2 seja exibido em um frame
+                        .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin)
                 )
-                .formLogin(form -> form.defaultSuccessUrl("/health", true)); // Mantém o formulário de login padrão
+                .formLogin(form -> form.defaultSuccessUrl("/health", true));
 
         return http.build();
     }
