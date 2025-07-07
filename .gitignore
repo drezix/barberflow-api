@@ -35,3 +35,4 @@ build/
 application-local.yml
 *.log
 .DS_Store
+http-client.env.json
