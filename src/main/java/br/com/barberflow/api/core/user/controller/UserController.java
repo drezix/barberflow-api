@@ -1,12 +1,16 @@
 package br.com.barberflow.api.core.user.controller;
 
 import br.com.barberflow.api.core.user.domain.User;
+import br.com.barberflow.api.core.user.dto.UserRequestDTO;
+import br.com.barberflow.api.core.user.dto.UserResponseDTO;
+import br.com.barberflow.api.core.user.mapper.UserMapper;
 import br.com.barberflow.api.core.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/users")
@@ -14,22 +18,28 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    private final UserMapper userMapper;
 
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        User newUser = userService.createUser(user);
-        return ResponseEntity.status(201).body(newUser);
+    public ResponseEntity<UserResponseDTO> createUser(@RequestBody UserRequestDTO userRequestDTO) {
+        User newUser = userService.createUser(userRequestDTO);
+        UserResponseDTO responseDTO = userMapper.toResponseDTO(newUser);
+        return ResponseEntity.status(201).body(responseDTO);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findUserById(@PathVariable Long id) {
+    public ResponseEntity<UserResponseDTO> findUserById(@PathVariable Long id) {
         User user = userService.findUserById(id);
-        return ResponseEntity.ok(user);
+        UserResponseDTO responseDTO = userMapper.toResponseDTO(user);
+        return ResponseEntity.ok(responseDTO);
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> findAllUsers() {
+    public ResponseEntity<List<UserResponseDTO>> findAllUsers() {
         List<User> users = userService.findAllUsers();
-        return ResponseEntity.ok(users);
+        List<UserResponseDTO> responseDTOs = users.stream()
+                .map(userMapper::toResponseDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(responseDTOs);
     }
 }
