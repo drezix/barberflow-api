@@ -1,6 +1,8 @@
 package br.com.barberflow.api.core.user.service;
 
 import br.com.barberflow.api.core.user.domain.User;
+import br.com.barberflow.api.core.user.dto.UserRequestDTO;
+import br.com.barberflow.api.core.user.mapper.UserMapper;
 import br.com.barberflow.api.core.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,10 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
-    public User createUser(User user) {
+    public User createUser(UserRequestDTO userRequestDTO) {
+        User user = userMapper.toEntity(userRequestDTO);
         return userRepository.save(user);
     }
 
