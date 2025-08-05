@@ -1,10 +1,10 @@
-package br.com.barberflow.api.core.user.controller;
+package br.com.inkflow.api.core.user.controller;
 
-import br.com.barberflow.api.core.user.domain.User;
-import br.com.barberflow.api.core.user.dto.UserRequestDTO;
-import br.com.barberflow.api.core.user.dto.UserResponseDTO;
-import br.com.barberflow.api.core.user.mapper.UserMapper;
-import br.com.barberflow.api.core.user.service.UserService;
+import br.com.inkflow.api.core.user.domain.User;
+import br.com.inkflow.api.core.user.dto.UserRequestDTO;
+import br.com.inkflow.api.core.user.dto.UserResponseDTO;
+import br.com.inkflow.api.core.user.mapper.UserMapper;
+import br.com.inkflow.api.core.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

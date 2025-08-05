@@ -1,8 +1,8 @@
 spring:
   application:
-    name: barberflow-api
+    name: inkflow-api
   datasource:
-    url: jdbc:h2:mem:barberflow
+    url: jdbc:h2:mem:inkflow
     driverClassName: org.h2.Driver
     username: sa
     password: ""

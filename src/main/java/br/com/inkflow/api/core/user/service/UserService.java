@@ -1,9 +1,9 @@
-package br.com.barberflow.api.core.user.service;
+package br.com.inkflow.api.core.user.service;
 
-import br.com.barberflow.api.core.user.domain.User;
-import br.com.barberflow.api.core.user.dto.UserRequestDTO;
-import br.com.barberflow.api.core.user.mapper.UserMapper;
-import br.com.barberflow.api.core.user.repository.UserRepository;
+import br.com.inkflow.api.core.user.domain.User;
+import br.com.inkflow.api.core.user.dto.UserRequestDTO;
+import br.com.inkflow.api.core.user.mapper.UserMapper;
+import br.com.inkflow.api.core.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package br.com.barberflow.api.core.user.repository;
+package br.com.inkflow.api.core.user.repository;
 
-import br.com.barberflow.api.core.user.domain.User;
+import br.com.inkflow.api.core.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

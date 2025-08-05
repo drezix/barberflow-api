@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.barberflow</groupId>
-	<artifactId>barberflow-api</artifactId>
+	<artifactId>inkflow-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>barberflow-api</name>
 	<description>API para o sistema de gestão de barbearias BarberFlow</description>

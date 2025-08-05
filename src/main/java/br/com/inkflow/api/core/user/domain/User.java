@@ -1,4 +1,4 @@
-package br.com.barberflow.api.core.user.domain;
+package br.com.inkflow.api.core.user.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

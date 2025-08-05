@@ -1,8 +1,8 @@
-package br.com.barberflow.api.core.user.mapper;
+package br.com.inkflow.api.core.user.mapper;
 
-import br.com.barberflow.api.core.user.domain.User;
-import br.com.barberflow.api.core.user.dto.UserRequestDTO;
-import br.com.barberflow.api.core.user.dto.UserResponseDTO;
+import br.com.inkflow.api.core.user.domain.User;
+import br.com.inkflow.api.core.user.dto.UserRequestDTO;
+import br.com.inkflow.api.core.user.dto.UserResponseDTO;
 import org.springframework.stereotype.Component;
 
 @Component

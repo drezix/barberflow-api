@@ -1,6 +1,6 @@
-package br.com.barberflow.api.core.user.dto;
+package br.com.inkflow.api.core.user.dto;
 
-import br.com.barberflow.api.core.user.domain.UserRole;
+import br.com.inkflow.api.core.user.domain.UserRole;
 
 public record UserResponseDTO(
         Long id,

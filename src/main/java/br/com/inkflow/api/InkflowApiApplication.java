@@ -1,13 +1,13 @@
-package br.com.barberflow.api;
+package br.com.inkflow.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BarberflowApiApplication {
+public class InkflowApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BarberflowApiApplication.class, args);
+		SpringApplication.run(InkflowApiApplication.class, args);
 	}
 
 }
