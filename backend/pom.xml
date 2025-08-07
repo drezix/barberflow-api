@@ -8,11 +8,11 @@
 		<version>3.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.barberflow</groupId>
+	<groupId>br.com.inkflow</groupId>
 	<artifactId>inkflow-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>barberflow-api</name>
-	<description>API para o sistema de gestão de barbearias BarberFlow</description>
+	<name>inkflow-api</name>
+	<description>API for InkFlow, a Tattoo system.</description>
 	<url/>
 	<licenses>
 		<license/>

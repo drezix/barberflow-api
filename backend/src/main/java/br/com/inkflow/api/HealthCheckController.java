@@ -10,6 +10,6 @@ public class HealthCheckController {
 
     @GetMapping
     public String check() {
-        return "Backend do BarberFlow está no ar! Data: " + java.time.LocalDate.now();
+        return "Backend do InkFlow está no ar! Data: " + java.time.LocalDate.now();
     }
 }
